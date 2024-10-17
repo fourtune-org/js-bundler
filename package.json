@@ -9,7 +9,10 @@
     "url": "git+https://github.com/fourtune-org/js-bundler.git"
   },
   "exports": {
-    ".": "./src/main.mjs",
+    ".": {
+      "import": "./src/main.mjs",
+      "types": "./src/main.d.mts"
+    },
     "./exports": "./src/exports.mjs"
   },
   "dependencies": {
