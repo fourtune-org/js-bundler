@@ -19,8 +19,8 @@ export default async function(
 		on_rollup_log_fn = null
 	} = {}
 ) {
-	const pre_plugins = additional_rollup_plugins.filter(plugin => plugin.when === "pre")
-	const post_plugins = additional_rollup_plugins.filter(plugin => plugin.when === "post")
+	const pre_plugins = additional_rollup_plugins.filter(plugin => plugin.when === "pre").map(plugin => plugin.plugin)
+	const post_plugins = additional_rollup_plugins.filter(plugin => plugin.when === "post").map(plugin => plugin.plugin)
 
 	const saved_cwd = process.cwd()
 
