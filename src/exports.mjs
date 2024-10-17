@@ -39,3 +39,11 @@ export {
 export {
 	default as babelPluginModuleResolver
 } from "babel-plugin-module-resolver"
+
+export {
+	default as mts
+} from "./ts/mts.mjs"
+
+export {
+	default as stripTypeScriptTypes
+} from "./ts/stripTypeScriptTypes.mjs"
