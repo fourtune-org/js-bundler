@@ -27,3 +27,15 @@ export {
 export {
 	default as getTypeScriptCompilerOptions
 } from "./ts/getTypeScriptCompilerOptions.mjs"
+
+export {
+	default as babelCore
+} from "@babel/core"
+
+export {
+	default as babelPresetTypeScript
+} from "@babel/preset-typescript"
+
+export {
+	default as babelPluginModuleResolver
+} from "babel-plugin-module-resolver"
