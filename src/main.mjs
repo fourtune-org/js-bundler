@@ -6,8 +6,7 @@ import {
 	terser,
 	nodeResolve,
 	getTypeScriptCompilerOptions,
-	dts_resolver,
-	mts
+	dts_resolver
 } from "./exports.mjs"
 
 export default async function(
@@ -38,8 +37,6 @@ export default async function(
 			virtual_entry_file_name += ".d.mts"
 		} else if (file_type === "mjs") {
 			virtual_entry_file_name += ".mjs"
-		} else if (file_type === "mts") {
-			virtual_entry_file_name += ".mts"
 		} else {
 			throw new Error(`Invalid file type '${file_type}'.`)
 		}
@@ -89,9 +86,6 @@ export default async function(
 				}
 			})
 		} else if (file_type === "mjs") {
-			rollup_plugins.push(nodeResolve())
-		} else if (file_type === "mts") {
-			rollup_plugins.push(mts())
 			rollup_plugins.push(nodeResolve())
 		}
 

@@ -27,23 +27,3 @@ export {
 export {
 	default as getTypeScriptCompilerOptions
 } from "./ts/getTypeScriptCompilerOptions.mjs"
-
-export {
-	default as babelCore
-} from "@babel/core"
-
-export {
-	default as babelPresetTypeScript
-} from "@babel/preset-typescript"
-
-export {
-	default as babelPluginModuleResolver
-} from "babel-plugin-module-resolver"
-
-export {
-	default as mts
-} from "./ts/mts.mjs"
-
-export {
-	default as stripTypeScriptTypes
-} from "./ts/stripTypeScriptTypes.mjs"
